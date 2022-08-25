@@ -1,4 +1,7 @@
 
+from msilib.schema import Binary
+
+
 Noterminal=[ 'PROG' , 'PROC' , 'GORP' , 'var' , '(' , ')' , 'walk' , 
     'jump' , 'jumpTo', 'veer' , 'look' , 'drop' , 'grab', 'get' ,
     'free' , 'pop' , 'walk' , 'if', 'else' , 'while' , 'do' , 
@@ -8,6 +11,8 @@ Noterminal=[ 'PROG' , 'PROC' , 'GORP' , 'var' , '(' , ')' , 'walk' ,
 
 function=['walk' , 'jump' , 'jumpTo', 'veer' , 'look' , 'drop' ,
      'grab', 'get' , 'free' , 'pop' , 'walk' ]
+
+Binary=[ 'jumpTo' ,'walk' , 'canWalk' , 'isfacing' ]
     
 def Isterminal(token):
     if token in Noterminal:
@@ -17,6 +22,12 @@ def Isterminal(token):
 
 def Isfunction(token):
     if token in function:
+        return True 
+    else:
+        return False
+
+def Isbinary(token):
+    if token in Binary:
         return True 
     else:
         return False

@@ -1,5 +1,6 @@
 #%%
 from contextvars import Token
+from typing import List
 import nltk
 import numpy
 import Rules as RL
@@ -73,7 +74,20 @@ def PROCR( S1: list ):
 
     return R
 
-def PROCR( S1: list ):
+def FUNCTIONR(S1: list):
+    
+    if RL.Isbinary: 
+        None
+
+    else:
+
+def BinaryFR(S1: list):
+    None
+
+def NBinaryFR(S1: list):
+
+
+def BODYPR( S1: list ):
     R = True
     PO = False
     i = 1
@@ -91,7 +105,7 @@ def PROCR( S1: list ):
     if not PO :
         R= False
 
-    return R  
+    return R
     
     
 # %%
